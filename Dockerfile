@@ -17,8 +17,7 @@ RUN curl -LO https://github.com/pandora-next/deploy/releases/download/v0.1.3/Pan
     
 # 等待3分钟，获取授权
 # RUN sleep 1m
-RUN --mount=type=secret,id=LICENSE_URL,mode=0444,required=true \
-    curl -fLO https://dash.pandoranext.com/data/$(cat /run/secrets/LICENSE_URL)/license.jwt
+RUN curl -fLO https://dash.pandoranext.com/data/$(cat /etc/secrets/LICENSE_URL)/license.jwt
 RUN chmod 777 license.jwt
 
 # 下载config.json文件，并给予所有用户读写和执行权限
