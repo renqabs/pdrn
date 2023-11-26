@@ -17,8 +17,9 @@ RUN latest_url=$(curl "https://api.github.com/repos/pandora-next/deploy/releases
     && rm PandoraNext.tar.gz \
     && chmod 777 -R .
 
-# 下载config.json文件，并给予所有用户读写和执行权限
-COPY config.json .
+# 获取config.json
+RUN --mount=type=secret,id=CONFIG_JSON,dst=/etc/secrets/CONFIG_JSON \
+    cat /etc/secrets/CONFIG_JSON > config.json
 RUN chmod 777 config.json
 
 # 修改PandoraNext的执行权限
