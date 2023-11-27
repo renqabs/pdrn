@@ -4,5 +4,7 @@
   "proxy_url": "",
   "public_share": false,
   "site_password": "",
+  "setup_password": "123456",
+  "license_id": "abcdefg",
   "whitelist": null
 }
