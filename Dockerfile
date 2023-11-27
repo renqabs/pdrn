@@ -25,9 +25,6 @@ RUN chmod 777 config.json
 # 修改PandoraNext的执行权限
 RUN chmod 777 ./PandoraNext
 
-COPY start.sh .
-RUN chmod 777 start.sh
-
 # 创建全局缓存目录并提供最宽松的权限
 RUN mkdir /.cache && chmod 777 /.cache
 
@@ -35,4 +32,4 @@ RUN mkdir /.cache && chmod 777 /.cache
 EXPOSE 8080
 
 # 启动命令
-CMD ["sh","start.sh"]
+CMD ["./PandoraNext"]
