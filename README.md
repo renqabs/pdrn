@@ -8,7 +8,7 @@ license_url获取方法，复制红色框内的字符串（两个斜杠之间，
 ![image](https://github.com/renqabs/pdrn/assets/130155002/7eec537b-bbc2-4a9d-bd65-472da5dc52fb)
 
 
-config_json详细配置详见[pandora-next](https://github.com/pandora-next/deploy)，无额外需求,直接复制config.example.config内容即可
+config_json详细配置详见[pandora-next](https://github.com/pandora-next/deploy)，无额外需求,setup password尽量设置的复杂一些
 
 如遇到报错429,在setting下，拉到最下方，点击 Suspend Web Service（等同暂停），等待三分钟以上，回到setting下点击Resume Web Service（等同启动），等待1分钟左右，出现版本信息以及[GIN]开头的日志就表明pandora运行成功（即使状态显示为Failed deploy 也可以正常使用）
 
